@@ -1,0 +1,25 @@
+h3#header {
+  display: inline;
+  margin-left: 4rem;
+}
+body#footer {
+  text-align: center;
+}
+nav#header {
+  display: inline;
+  float: right;
+  margin-right: 4rem;
+  font-size: 1rem;
+}
+ul#header {
+  margin: 0%;
+}
+ul#footer {
+  padding: 0%;
+}
+article#footer {
+  text-align: center;
+}
+a#project {
+  display: block;
+}
