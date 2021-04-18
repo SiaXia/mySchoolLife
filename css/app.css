@@ -1,6 +1,37 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  -ms-overflow-style: none;
+  font-family: MaruBuri-Regular;
+  font-size: 1.1em;
+  background-color: rgba(255, 255, 255, 0);
+  margin: 0;
+
+  animation: fadein 2s;
+}
+/* 스크롤바 삭제 */
+body::-webkit-scrollbar {
+  display: none;
+}
+/* 폰트 */
+@font-face {
+  font-family: 'MaruBuri-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* 페이드인 */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* 기본값 */
 p {
   text-align: center;
 }
@@ -13,35 +44,73 @@ a {
   text-decoration: none;
   color: black;
 }
-body {
-  -ms-overflow-style: none;
-  font-family: MaruBuri-Regular;
-  font-size: 1.1em;
-  background-color: rgba(255, 255, 255, 0);
+/* 섹션 */
+section {
+  width: 100vw;
+  height: 160vh;
+  position: sticky;
+  top: 6em;
+  bottom: auto;
+  z-index: 1;
+  text-align: center;
+}
+article {
+  height: 100vh;
+  text-align: center;
+}
+/* 배경 */
+div#blur {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  text-align: center;
+}
+/* 타이틀 */
+h3#title {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: sticky;
+  top: -3em;
+  display: block;
+  padding-top: 4em;
+  padding-bottom: 3em;
+  text-align: center;
   margin: 0;
-  animation: fadein 2s;
+  z-index: 2;
 }
-body::-webkit-scrollbar {
-  display: none;
+h3#title > a {
+  color: #fdb927;
 }
-
-@font-face {
-  font-family: 'MaruBuri-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff')
-    format('woff');
-  font-weight: normal;
-  font-style: normal;
+/* 헤더 */
+header {
+  position: sticky;
+  top: 3.5em;
+  display: block;
+  margin: 0 auto;
+  width: 25em;
+  text-align: center;
+  z-index: 3;
 }
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+header > article {
+  height: 100%;
 }
-
+header > article > nav > ul {
+  margin-bottom: 0;
+}
+header > article > nav > ul > a {
+  color: white;
+}
+/* 푸터 */
+section#footer {
+  position: fixed;
+  height: 100%;
+  top: 93%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 6;
+}
+article#footer > p {
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.65);
+}
+/* 메인 */
 div#background {
   width: 100vw;
   height: 100%;
@@ -50,43 +119,13 @@ div#background {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-}
-h3#title {
-  position: sticky;
-  top: -3em;
-  display: block;
-  padding-top: 4em;
-  padding-bottom: 2em;
-  text-align: center;
-  margin: 0;
-}
-
-header {
-  position: sticky;
-  top: 3.5em;
-  display: block;
-  margin: 0 auto;
-  width: 25em;
-  text-align: center;
-}
-
-header > article > nav > ul > a {
-  color: rgba(92, 42, 0, 0.95);
-  font-weight: bold;
-}
-section {
-  width: 100vw;
-  height: 100vh;
-  position: sticky;
-  top: 6em;
-  bottom: auto;
-  z-index: 1;
+  z-index: -1;
 }
 img#home {
   width: 25em;
 }
 div#home {
-  background-color: rgba(92, 42, 0, 0.97);
+  background-color: rgba(45, 52, 54, 0.7);
   padding: 3em;
   display: block;
   margin: 0 auto;
@@ -102,12 +141,233 @@ div#home > #hi {
   color: #fdb927;
 }
 article#home {
-  margin: 6em auto;
+  padding-top: 6em;
 }
-article#footer > p {
-  font-size: 0.8em;
-  color: rgba(0, 0, 0, 0.4);
+/* 소개 */
+section > div > article > img {
+  margin-top: 13em;
 }
-footer {
-  margin-top: 4em;
+section > div > article > p {
+  margin: 0 auto;
+  margin-top: 3.5em;
+  color: rgba(255, 255, 255, 0.85);
+  width: 25em;
+  font-size: 1.1em;
+}
+section#introduction1 {
+  background-image: url('../image/cherry_blossom.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+section#introduction2 {
+  background-image: url('../image/guro.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+section#introduction3 {
+  background-image: url('../image/holy_mili.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+section#introduction4 {
+  background-color: rgba(0, 0, 0, 0.93);
+}
+section#introduction4 > article {
+  display: inline-block;
+}
+section#introduction4 > article > p {
+  margin-top: 40vh;
+  color: white;
+  font-size: 1.8em;
+}
+/* 교과활동 */
+section#curriculum1 {
+  background-image: url('../image/curriculum.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+section#curriculum1 > article {
+  padding: 1em 2em;
+  margin-top: 3em;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.75);
+  height: auto;
+}
+section#curriculum1 > article > h3#web {
+  color: rgba(253, 185, 39, 0.95);
+}
+section#curriculum1 > article > ul#web {
+  font-size: 1.1em;
+}
+section#curriculum1 > article > ul#web > li > div {
+  color: #fdb927;
+  margin-bottom: 0.5em;
+}
+section#curriculum1 > article > h4#others {
+  color: rgba(81, 151, 213, 0.95);
+  margin: 2em 0 1em 0;
+}
+section#curriculum1 > article > ul#others > li > div {
+  display: inline;
+  color: #5197d5;
+}
+section#curriculum1 > article > ul#others {
+  font-size: 0.95em;
+}
+section#curriculum1 > article > ul {
+  list-style: none;
+}
+section#curriculum2 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+section#curriculum2 > div > article > p {
+  margin-top: 5em;
+}
+p#curriculum2 {
+  margin-top: 3em;
+  font-size: 1.3em;
+  color: #fdb927;
+}
+/* 비교과활동 */
+div#othersBackground {
+  width: 100vw;
+  background-image: url('../image/background2.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+div#othersBackground > article {
+  padding: 0 2em 2em 2em;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+div#othersBackground > article > img {
+  margin-top: 6em;
+}
+div#othersBackground > article > p {
+  color: white;
+  font-size: 1.15em;
+  margin-top: 2em;
+}
+section#others5 > div > article {
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+}
+section#others5 > div > article > p {
+  margin-top: 40vh;
+  color: white;
+  font-size: 1.3em;
+}
+/* 프로젝트 */
+div#projectBlur {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+article#projects {
+  display: inline-block;
+  margin-top: 30vh;
+  color: white;
+}
+article#projects > h3 {
+  color: rgba(253, 185, 39, 0.9);
+  margin-bottom: 0;
+}
+article#projects > ul {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+p#type {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  color: #fdb927;
+}
+p#description {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  color: rgba(253, 185, 39, 0.9);
+}
+button#project {
+  background: none;
+  width: 4em;
+  height: 4em;
+  padding: 0;
+  border: 0;
+}
+button#project > a {
+  width: inherit;
+  margin: 0;
+}
+button#project > a > img {
+  width: inherit;
+}
+section#project1 {
+  background-image: url('../image/lovely_kante.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 4;
+}
+
+section#project2 {
+  background-image: url('../image/rhythmGame.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 4;
+}
+section#project3 {
+  background-image: url('../image/chessGame.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 4;
+}
+section#project4 {
+  background-image: url('../image/localhost.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 4;
+}
+article#projects > img {
+  margin: 0;
+}
+/* 맺는말 */
+section#motto {
+  height: 100vh;
+  background-image: url('../image/charlieChaplin.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 5;
+}
+section#motto article {
+  height: 30%;
+  display: inline-block;
+  margin-top: 35vh;
+}
+article > p#motto {
+  color: rgba(253, 185, 39, 0.9);
+  font-size: 1.5em;
+  max-width: 19em;
+  margin: 0 5em;
+}
+article > p#by {
+  color: rgba(253, 185, 39, 0.9);
+  margin-top: 2em;
 }
