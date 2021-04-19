@@ -1,6 +1,7 @@
 /* 소개 */
 #intro {
   color: #fdb927;
+  font-weight: bold;
 }
 section > div > article > img {
   position: absolute;
@@ -45,13 +46,14 @@ section#introduction3 {
   background-attachment: fixed;
 }
 section#introduction4 {
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.93);
 }
 section#introduction4 > article {
   display: inline-block;
 }
 section#introduction4 > article > p {
-  margin-top: 40vh;
+  margin-top: 45vh;
   color: white;
   font-size: 1.8em;
 }

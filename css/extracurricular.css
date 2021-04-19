@@ -1,0 +1,59 @@
+/* 비교과활동 */
+#excur {
+  color: #fdb927;
+  font-weight: bold;
+}
+article {
+  max-width: 30em;
+}
+p {
+  margin: 1em 2em;
+}
+div#extracurricularBackground {
+  width: 100vw;
+  background-image: url('../image/background2.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+div#extracurricularBackground > article {
+  padding: 0 2em 2em 2em;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+div#extracurricularBackground > article > img {
+  margin-top: 23vh;
+}
+div#extracurricularBackground > article > p {
+  color: white;
+  font-size: 1em;
+  margin-top: 2em;
+}
+
+section#extracurricular5 > div > article > img {
+  margin-top: 30vh;
+}
+section#extracurricular6 > div > article > img {
+  margin-top: 18vh;
+}
+section#extracurricular7 > div > article > img {
+  margin-top: 28vh;
+}
+section#extracurricular9 {
+  height: 100vh;
+}
+section#extracurricular9 > div > article {
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  max-width: 100vw;
+}
+section#extracurricular9 > div > article > p {
+  margin-top: 50vh;
+  color: white;
+  font-size: 1.3em;
+}
+#footer {
+  margin: 0 auto;
+}

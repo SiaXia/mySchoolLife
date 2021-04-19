@@ -1,0 +1,43 @@
+/* 맺는말 */
+a#close {
+  color: #fdb927;
+  font-weight: bold;
+}
+header {
+  position: absolute;
+  opacity: 0.6;
+}
+section#close {
+  height: 100vh;
+  background-image: url('../image/charlieChaplin.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 3;
+}
+section#close article {
+  height: 30%;
+  display: inline-block;
+  margin-top: 35vh;
+}
+article > p#close {
+  color: rgba(253, 185, 39, 0.9);
+  font-size: 1.5em;
+  max-width: 16em;
+  margin: 0 auto;
+}
+article > p#by {
+  color: rgba(253, 185, 39, 0.9);
+  margin-top: 1em;
+}
+div > article > p {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 33em;
+  margin-top: 3em;
+  line-height: 1.5em;
+}
+section#footer {
+  background-color: transparent;
+  opacity: 0.6;
+}

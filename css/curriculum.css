@@ -1,4 +1,11 @@
 /* 교과활동 */
+#cur {
+  color: #fdb927;
+  font-weight: bold;
+}
+p {
+  line-height: 2em;
+}
 section#curriculum1 {
   background-image: url('../image/curriculum.jpg');
   background-size: cover;
@@ -11,7 +18,7 @@ section#curriculum1 > article {
   height: 100vh;
 }
 section#curriculum1 > article > div {
-  padding: 1em 2em;
+  padding: 1em 2em 3em 2em;
   margin-top: 3em;
   display: inline-block;
   background: rgba(0, 0, 0, 0.75);
@@ -22,6 +29,7 @@ section#curriculum1 > article > div {
   left: 0;
   right: 0;
   margin: auto;
+  max-height: 30em;
 }
 section#curriculum1 > article > div > h3#web {
   color: rgba(253, 185, 39, 0.95);
@@ -44,9 +52,7 @@ section#curriculum1 > article > div > ul#others > li > div {
 section#curriculum1 > article > div > ul#others {
   font-size: 0.95em;
 }
-section#curriculum1 p {
-  color: rgba(253, 185, 39, 0.95);
-}
+
 section#curriculum2 {
   background-image: url('../image/curriculum.jpg');
   background-size: cover;
@@ -59,11 +65,18 @@ section#curriculum2 > article {
   height: 100vh;
 }
 section#curriculum2 > article > div {
-  padding: 1em 2em;
-  margin-top: 3em;
+  padding: 1em 2em 6em 2em;
+  margin-top: 8em;
   display: inline-block;
   background: rgba(0, 0, 0, 0.75);
-  height: auto;
+  position: absolute;
+  height: 60vh;
+  top: -76vh;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-height: 32em;
 }
 section#curriculum2 > article > div > h3#web {
   color: rgba(253, 185, 39, 0.95);
@@ -87,13 +100,26 @@ section#curriculum2 > article > div > ul#others {
   font-size: 0.95em;
 }
 section#curriculum3 {
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
 }
-section#curriculum3 > div > article > p {
-  margin-top: 5em;
+section#curriculum3 > div > article {
+  position: absolute;
+  height: 100vh;
+  top: -3vh;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-height: 32em;
 }
-p#curriculum3 {
-  margin-top: 3em;
+p#graph {
+  color: white;
+  margin-top: 1.5em;
+}
+p#desc {
+  margin-top: 2em;
+  font-weight: bold;
   font-size: 1.3em;
   color: #fdb927;
 }

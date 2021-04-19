@@ -1,6 +1,11 @@
 /* 프로젝트 */
+#proj {
+  color: #fdb927;
+  font-weight: bold;
+}
 div#projectBlur {
   background-color: rgba(0, 0, 0, 0.9);
+  height: 100%;
 }
 article#projects {
   display: inline-block;
@@ -71,6 +76,14 @@ section#project4 {
   background-position: center;
   background-attachment: fixed;
   z-index: 2;
+  height: 100vh;
+}
+section#project4 > div > article {
+  height: 100%;
+  margin-top: 0;
+}
+section#project4 > div > article > img {
+  margin-top: 35vh;
 }
 article#projects > img {
   margin: 0;

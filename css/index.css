@@ -1,18 +1,15 @@
 /* 메인 */
 header {
+  width: 40em;
+  padding: 2em 0 0 0;
   position: block;
-  padding: 2em 10%;
-  background-color: rgba(33, 33, 33, 0.8);
 }
-div#background {
-  width: 100vw;
-  height: 100%;
-  background-image: url('../image/home.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: -1;
+header > article > nav {
+  padding: 1em 3em;
+  /* background-color: rgba(33, 33, 33, 0.8); */
+}
+header > article > nav > ul {
+  padding-top: 3em;
 }
 section#home {
   height: 100vh;
@@ -54,4 +51,7 @@ div#home > #hi {
   font-weight: bold;
   font-size: 1.3em;
   color: #fdb927;
+}
+section#footer {
+  background: transparent;
 }
