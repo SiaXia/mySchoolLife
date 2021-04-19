@@ -1,0 +1,57 @@
+/* 소개 */
+#intro {
+  color: #fdb927;
+}
+section > div > article > img {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 25%;
+  margin: 0 auto;
+}
+section > div > article > p {
+  margin: 0 auto;
+  position: absolute;
+  top: 38%;
+  left: 0%;
+  bottom: 0;
+  right: 0;
+  height: 25%;
+  color: rgba(255, 255, 255, 0.85);
+  width: 25em;
+  font-size: 1.1em;
+}
+section#introduction1 {
+  background-image: url('../image/cherry_blossom.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+section#introduction2 {
+  background-image: url('../image/guro.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+section#introduction3 {
+  background-image: url('../image/holy_mili.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+section#introduction4 {
+  background-color: rgba(0, 0, 0, 0.93);
+}
+section#introduction4 > article {
+  display: inline-block;
+}
+section#introduction4 > article > p {
+  margin-top: 40vh;
+  color: white;
+  font-size: 1.8em;
+}

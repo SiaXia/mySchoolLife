@@ -1,0 +1,57 @@
+/* 메인 */
+header {
+  position: block;
+  padding: 2em 10%;
+  background-color: rgba(33, 33, 33, 0.8);
+}
+div#background {
+  width: 100vw;
+  height: 100%;
+  background-image: url('../image/home.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+section#home {
+  height: 100vh;
+  position: block;
+}
+h3#title {
+  background-color: transparent;
+  padding: 0;
+}
+article#home {
+  height: auto;
+}
+div#home {
+  background-color: rgba(33, 33, 33, 0.8);
+  padding: 3em;
+  display: block;
+  margin: 0 auto;
+  width: 25em;
+  max-width: 30%;
+  position: absolute;
+  top: 28%;
+  left: 0%;
+  bottom: 0;
+  right: 0;
+  height: 25%;
+  padding-bottom: 15em;
+}
+div#home > img {
+  max-width: 73%;
+  height: 140%;
+  max-height: 20em;
+}
+div#home > p {
+  color: white;
+  text-align: right;
+  margin-right: 4%;
+}
+div#home > #hi {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #fdb927;
+}

@@ -1,0 +1,32 @@
+/* 비교과활동 */
+div#othersBackground {
+  width: 100vw;
+  background-image: url('../image/background2.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+div#othersBackground > article {
+  padding: 0 2em 2em 2em;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+div#othersBackground > article > img {
+  margin-top: 6em;
+}
+div#othersBackground > article > p {
+  color: white;
+  font-size: 1.15em;
+  margin-top: 2em;
+}
+section#others5 > div > article {
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+}
+section#others5 > div > article > p {
+  margin-top: 40vh;
+  color: white;
+  font-size: 1.3em;
+}

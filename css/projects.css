@@ -1,0 +1,77 @@
+/* 프로젝트 */
+div#projectBlur {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+article#projects {
+  display: inline-block;
+  margin-top: 30vh;
+  color: white;
+}
+article#projects > h3 {
+  color: rgba(253, 185, 39, 0.9);
+  margin-bottom: 0;
+}
+article#projects > ul {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+p#type {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  color: #fdb927;
+}
+p#description {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  color: rgba(253, 185, 39, 0.9);
+}
+button#project {
+  background: none;
+  width: 4em;
+  height: 4em;
+  padding: 0;
+  border: 0;
+}
+button#project > a {
+  width: inherit;
+  margin: 0;
+}
+button#project > a > img {
+  width: inherit;
+}
+section#project1 {
+  background-image: url('../image/lovely_kante.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 2;
+}
+
+section#project2 {
+  background-image: url('../image/rhythmGame.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 2;
+}
+section#project3 {
+  background-image: url('../image/chessGame.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 2;
+}
+section#project4 {
+  background-image: url('../image/localhost.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 2;
+}
+article#projects > img {
+  margin: 0;
+}

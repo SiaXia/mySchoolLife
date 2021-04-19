@@ -36,6 +36,7 @@ p {
   text-align: center;
 }
 ul {
+  list-style: none;
   margin: 2em 0;
   padding: 0;
 }
@@ -74,7 +75,7 @@ h3#title {
   padding-bottom: 3em;
   text-align: center;
   margin: 0;
-  z-index: 2;
+  z-index: 20;
 }
 h3#title > a {
   color: #fdb927;
@@ -87,7 +88,7 @@ header {
   margin: 0 auto;
   width: 25em;
   text-align: center;
-  z-index: 3;
+  z-index: 21;
 }
 header > article {
   height: 100%;
@@ -97,277 +98,18 @@ header > article > nav > ul {
 }
 header > article > nav > ul > a {
   color: white;
+  z-index: 22;
 }
 /* 푸터 */
 section#footer {
+  text-align: right;
   position: fixed;
   height: 100%;
-  top: 93%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 6;
+  top: 90%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 21;
 }
 article#footer > p {
   font-size: 0.9em;
-  color: rgba(255, 255, 255, 0.65);
-}
-/* 메인 */
-div#background {
-  width: 100vw;
-  height: 100%;
-  background-image: url('../image/home.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: -1;
-}
-img#home {
-  width: 25em;
-}
-div#home {
-  background-color: rgba(45, 52, 54, 0.7);
-  padding: 3em;
-  display: block;
-  margin: 0 auto;
-  width: 25em;
-}
-div#home > p {
-  color: white;
-  text-align: right;
-}
-div#home > #hi {
-  font-weight: bold;
-  font-size: 1.3em;
-  color: #fdb927;
-}
-article#home {
-  padding-top: 6em;
-}
-/* 소개 */
-section > div > article > img {
-  margin-top: 13em;
-}
-section > div > article > p {
-  margin: 0 auto;
-  margin-top: 3.5em;
-  color: rgba(255, 255, 255, 0.85);
-  width: 25em;
-  font-size: 1.1em;
-}
-section#introduction1 {
-  background-image: url('../image/cherry_blossom.JPG');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-}
-section#introduction2 {
-  background-image: url('../image/guro.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-}
-section#introduction3 {
-  background-image: url('../image/holy_mili.JPG');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-}
-section#introduction4 {
-  background-color: rgba(0, 0, 0, 0.93);
-}
-section#introduction4 > article {
-  display: inline-block;
-}
-section#introduction4 > article > p {
-  margin-top: 40vh;
-  color: white;
-  font-size: 1.8em;
-}
-/* 교과활동 */
-section#curriculum1 {
-  background-image: url('../image/curriculum.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  color: white;
-}
-section#curriculum1 > article {
-  padding: 1em 2em;
-  margin-top: 3em;
-  display: inline-block;
-  background: rgba(0, 0, 0, 0.75);
-  height: auto;
-}
-section#curriculum1 > article > h3#web {
-  color: rgba(253, 185, 39, 0.95);
-}
-section#curriculum1 > article > ul#web {
-  font-size: 1.1em;
-}
-section#curriculum1 > article > ul#web > li > div {
-  color: #fdb927;
-  margin-bottom: 0.5em;
-}
-section#curriculum1 > article > h4#others {
-  color: rgba(81, 151, 213, 0.95);
-  margin: 2em 0 1em 0;
-}
-section#curriculum1 > article > ul#others > li > div {
-  display: inline;
-  color: #5197d5;
-}
-section#curriculum1 > article > ul#others {
-  font-size: 0.95em;
-}
-section#curriculum1 > article > ul {
-  list-style: none;
-}
-section#curriculum2 {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-section#curriculum2 > div > article > p {
-  margin-top: 5em;
-}
-p#curriculum2 {
-  margin-top: 3em;
-  font-size: 1.3em;
-  color: #fdb927;
-}
-/* 비교과활동 */
-div#othersBackground {
-  width: 100vw;
-  background-image: url('../image/background2.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-}
-div#othersBackground > article {
-  padding: 0 2em 2em 2em;
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0.75);
-}
-div#othersBackground > article > img {
-  margin-top: 6em;
-}
-div#othersBackground > article > p {
-  color: white;
-  font-size: 1.15em;
-  margin-top: 2em;
-}
-section#others5 > div > article {
-  display: inline-block;
-  width: 100%;
-  padding: 0;
-}
-section#others5 > div > article > p {
-  margin-top: 40vh;
-  color: white;
-  font-size: 1.3em;
-}
-/* 프로젝트 */
-div#projectBlur {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-article#projects {
-  display: inline-block;
-  margin-top: 30vh;
-  color: white;
-}
-article#projects > h3 {
-  color: rgba(253, 185, 39, 0.9);
-  margin-bottom: 0;
-}
-article#projects > ul {
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0;
-}
-p#type {
-  margin-top: 1em;
-  margin-bottom: 2em;
-  color: #fdb927;
-}
-p#description {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  color: rgba(253, 185, 39, 0.9);
-}
-button#project {
-  background: none;
-  width: 4em;
-  height: 4em;
-  padding: 0;
-  border: 0;
-}
-button#project > a {
-  width: inherit;
-  margin: 0;
-}
-button#project > a > img {
-  width: inherit;
-}
-section#project1 {
-  background-image: url('../image/lovely_kante.JPG');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: 4;
-}
-
-section#project2 {
-  background-image: url('../image/rhythmGame.JPG');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: 4;
-}
-section#project3 {
-  background-image: url('../image/chessGame.JPG');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: 4;
-}
-section#project4 {
-  background-image: url('../image/localhost.JPG');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: 4;
-}
-article#projects > img {
-  margin: 0;
-}
-/* 맺는말 */
-section#motto {
-  height: 100vh;
-  background-image: url('../image/charlieChaplin.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: 5;
-}
-section#motto article {
-  height: 30%;
-  display: inline-block;
-  margin-top: 35vh;
-}
-article > p#motto {
-  color: rgba(253, 185, 39, 0.9);
-  font-size: 1.5em;
-  max-width: 19em;
-  margin: 0 5em;
-}
-article > p#by {
-  color: rgba(253, 185, 39, 0.9);
-  margin-top: 2em;
+  color: rgba(255, 255, 255, 0.8);
 }

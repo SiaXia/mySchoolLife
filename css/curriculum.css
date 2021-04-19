@@ -1,0 +1,99 @@
+/* 교과활동 */
+section#curriculum1 {
+  background-image: url('../image/curriculum.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+section#curriculum1 > article {
+  height: 100vh;
+}
+section#curriculum1 > article > div {
+  padding: 1em 2em;
+  margin-top: 3em;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  height: 60vh;
+  top: -78vh;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+section#curriculum1 > article > div > h3#web {
+  color: rgba(253, 185, 39, 0.95);
+}
+section#curriculum1 > article > div > ul#web {
+  font-size: 1.1em;
+}
+section#curriculum1 > article > div > ul#web > li > div {
+  color: #fdb927;
+  margin-bottom: 1em;
+}
+section#curriculum1 > article > div > h4#others {
+  color: rgba(81, 151, 213, 0.95);
+  margin: 2em 0 1em 0;
+}
+section#curriculum1 > article > div > ul#others > li > div {
+  display: inline;
+  color: #5197d5;
+}
+section#curriculum1 > article > div > ul#others {
+  font-size: 0.95em;
+}
+section#curriculum1 p {
+  color: rgba(253, 185, 39, 0.95);
+}
+section#curriculum2 {
+  background-image: url('../image/curriculum.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+section#curriculum2 > article {
+  height: 100vh;
+}
+section#curriculum2 > article > div {
+  padding: 1em 2em;
+  margin-top: 3em;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.75);
+  height: auto;
+}
+section#curriculum2 > article > div > h3#web {
+  color: rgba(253, 185, 39, 0.95);
+}
+section#curriculum2 > article > div > ul#web {
+  font-size: 1.1em;
+}
+section#curriculum2 > article > div > ul#web > li > div {
+  color: #fdb927;
+  margin-bottom: 0.5em;
+}
+section#curriculum2 > article > div > h4#others {
+  color: rgba(81, 151, 213, 0.95);
+  margin: 2em 0 1em 0;
+}
+section#curriculum2 > article > div > ul#others > li > div {
+  display: inline;
+  color: #5197d5;
+}
+section#curriculum2 > article > div > ul#others {
+  font-size: 0.95em;
+}
+section#curriculum3 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+section#curriculum3 > div > article > p {
+  margin-top: 5em;
+}
+p#curriculum3 {
+  margin-top: 3em;
+  font-size: 1.3em;
+  color: #fdb927;
+}
