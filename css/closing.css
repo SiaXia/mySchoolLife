@@ -1,5 +1,5 @@
 /* 맺는말 */
-a#close {
+a#closing {
   color: #fdb927;
   font-weight: bold;
 }
@@ -7,7 +7,7 @@ header {
   position: absolute;
   opacity: 0.6;
 }
-section#close {
+section#closing {
   height: 100vh;
   background-image: url('../image/charlieChaplin.jpg');
   background-size: cover;
@@ -16,12 +16,12 @@ section#close {
   background-attachment: fixed;
   z-index: 3;
 }
-section#close article {
+section#closing article {
   height: 30%;
   display: inline-block;
   margin-top: 35vh;
 }
-article > p#close {
+article > p#closing {
   color: rgba(253, 185, 39, 0.9);
   font-size: 1.5em;
   max-width: 16em;

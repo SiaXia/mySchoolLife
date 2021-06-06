@@ -5,6 +5,7 @@
     <title>Lee Chanbin</title>
     <link rel="stylesheet" type="text/css" href="../css/app.css" />
     <link rel="stylesheet" type="text/css" href="../css/projects.css" />
+    <script type="text/javascript" src="../javascripts/index.js"></script>
   </head>
   <body>
     <div id='background'>
@@ -13,16 +14,44 @@
       <header>
         <article>
           <nav>
-            <h3 id="title">
-              <a href="../index.html">방구석 이찬빈</a>
-            </h3>
-            <ul>
-              <a id="intro" href="./introduction.html">소개</a>
-                <a id="cur" href="./curriculum.html">교과활동</a>
-                <a id="excur" href="./extracurricular.html">비교과활동</a>
-                <a id="proj" href="./projects.html">프로젝트</a>
-                <a id="close" href="./close.html">맺는말</a>
-            </ul>
+            <input
+            id="title"
+            type="button"
+            value="방구석 이찬빈"
+            onclick="href('../index.html')"
+          />
+          <ul>
+            <input
+              id="intro"
+              type="button"
+              value="소개"
+              onclick="href('./introduction.html')"
+            />
+            <input
+              id="cur"
+              type="button"
+              value="교과활동"
+              onclick="href('./curriculum.html')"
+            />
+            <input
+              id="excur"
+              type="button"
+              value="비교과활동"
+              onclick="href('./extracurricular.html')"
+            />
+            <input
+              id="proj"
+              type="button"
+              value="프로젝트"
+              onclick="href('./projects.html')"
+            />
+            <input
+              id="closing"
+              type="button"
+              value="맺는말"
+              onclick="href('./closing.html')"
+            />
+          </ul>
           </nav>
         </article>
       </header>

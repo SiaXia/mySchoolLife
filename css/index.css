@@ -15,9 +15,11 @@ section#home {
   height: 100vh;
   position: block;
 }
-h3#title {
+input#title {
   background-color: transparent;
   padding: 0;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px #aaa;
 }
 article#home {
   height: auto;
