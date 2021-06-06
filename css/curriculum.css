@@ -6,7 +6,9 @@
 p {
   line-height: 2em;
 }
-section#curriculum1 {
+section#curriculum1,
+#curriculum2,
+#curriculum3 {
   background-image: url('../image/curriculum.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -52,15 +54,6 @@ section#curriculum1 > article > div > ul#others > li > div {
 section#curriculum1 > article > div > ul#others {
   font-size: 0.95em;
 }
-
-section#curriculum2 {
-  background-image: url('../image/curriculum.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  color: white;
-}
 section#curriculum2 > article {
   height: 100vh;
 }
@@ -100,13 +93,30 @@ section#curriculum2 > article > div > ul#others {
   font-size: 0.95em;
 }
 section#curriculum3 {
+  height: 220vh;
+}
+section#curriculum3 > article > div {
+  padding: 4em 2em 6em 2em;
+  margin-top: 8em;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  height: 60vh;
+  top: -137vh;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-height: 32em;
+}
+section#curriculum4 {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
 }
-section#curriculum3 > div > article {
+section#curriculum4 > div > article {
   position: absolute;
   height: 100vh;
-  top: -3vh;
+  top: -11vh;
   bottom: 0px;
   left: 0;
   right: 0;
@@ -115,7 +125,7 @@ section#curriculum3 > div > article {
 }
 p#graph {
   color: white;
-  margin-top: 1.5em;
+  margin: 1.5em 8em;
 }
 p#desc {
   margin-top: 2em;

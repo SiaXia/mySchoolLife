@@ -37,12 +37,10 @@ button#project {
   padding: 0;
   border: 0;
 }
-button#project > a {
+button#project > img {
   width: inherit;
   margin: 0;
-}
-button#project > a > img {
-  width: inherit;
+  cursor: pointer;
 }
 section#project1 {
   background-image: url('../image/lovely_kante.JPG');

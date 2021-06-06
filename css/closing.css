@@ -1,5 +1,5 @@
 /* 맺는말 */
-a#closing {
+input#closing {
   color: #fdb927;
   font-weight: bold;
 }

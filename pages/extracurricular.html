@@ -7,54 +7,11 @@
     <link rel="stylesheet" type="text/css" href="../css/extracurricular.css" />
     <script type="text/javascript" src="../javascripts/index.js"></script>
   </head>
-  <body>
+  <body onload="onLoad(true)">
     <div id="background">
       <div id="blur">
         <!-- 헤더 -->
-        <header>
-          <article>
-            <nav>
-              <input
-              id="title"
-              type="button"
-              value="방구석 이찬빈"
-              onclick="href('../index.html')"
-            />
-            <ul>
-              <input
-                id="intro"
-                type="button"
-                value="소개"
-                onclick="href('./introduction.html')"
-              />
-              <input
-                id="cur"
-                type="button"
-                value="교과활동"
-                onclick="href('./curriculum.html')"
-              />
-              <input
-                id="excur"
-                type="button"
-                value="비교과활동"
-                onclick="href('./extracurricular.html')"
-              />
-              <input
-                id="proj"
-                type="button"
-                value="프로젝트"
-                onclick="href('./projects.html')"
-              />
-              <input
-                id="closing"
-                type="button"
-                value="맺는말"
-                onclick="href('./closing.html')"
-              />
-            </ul>
-            </nav>
-          </article>
-        </header>
+        <header id="header"></header>
         <!-- 비교과활동 -->
         <section id="extracurricular1">
           <div id="extracurricularBackground">
@@ -175,14 +132,7 @@
           </div>
         </section>
           <!-- 푸터 -->
-          <section id="footer">
-            <footer>
-              <article id="footer">
-                <p>© 2021 by Lee Chanbin.</p>
-                <p>웹개발입문 6조</p>
-              </article>
-            </footer>
-          </section>
+          <section id="footer"></section>
       </div>
     </div>
   </body>

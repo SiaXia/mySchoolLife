@@ -7,56 +7,12 @@
     <link rel="stylesheet" type="text/css" href="../css/projects.css" />
     <script type="text/javascript" src="../javascripts/index.js"></script>
   </head>
-  <body>
+  <body onload="onLoad(true)">
     <div id='background'>
       <div id="blur">
       <!-- 헤더 -->
-      <header>
-        <article>
-          <nav>
-            <input
-            id="title"
-            type="button"
-            value="방구석 이찬빈"
-            onclick="href('../index.html')"
-          />
-          <ul>
-            <input
-              id="intro"
-              type="button"
-              value="소개"
-              onclick="href('./introduction.html')"
-            />
-            <input
-              id="cur"
-              type="button"
-              value="교과활동"
-              onclick="href('./curriculum.html')"
-            />
-            <input
-              id="excur"
-              type="button"
-              value="비교과활동"
-              onclick="href('./extracurricular.html')"
-            />
-            <input
-              id="proj"
-              type="button"
-              value="프로젝트"
-              onclick="href('./projects.html')"
-            />
-            <input
-              id="closing"
-              type="button"
-              value="맺는말"
-              onclick="href('./closing.html')"
-            />
-          </ul>
-          </nav>
-        </article>
-      </header>
+      <header id="header"></header>
     <!-- 프로젝트 -->
-    <!-- 동영상 삭제, 버튼 추가 -->
     <section id='project1'>
         <div id='projectBlur'>
         <article id='projects'>
@@ -67,11 +23,10 @@
           <p>단순 클리커 게임</p>
           <p id="description">"귀요미 캉테와 떠나는 신나는 축구여행!"</p>
         </ul>
-        <button id='project'type="button"><a
-          href="https://github.com/siaxia/lovelyKante_java"
-          target="_blank"
-          ><img src='../image/github_white.png'></a
-        ></button>
+        <!-- onclick으로 변경 -->
+        <button id='project'type="button" onclick="href('https://github.com/siaxia/lovelyKante_java.git','_blank')">
+          <img src='../image/github_white.png'>
+        </button>
         </article>
       </div>
       </section>
@@ -86,11 +41,9 @@
           <p>로그인과 회원가입, 채팅구현</p>
           <p id="description">"지인이 직접만든 노래로 즐기는 신명나는 리듬게임!"</p>
         </ul>
-        <button id='project'type="button"><a
-          href="https://github.com/siaxia/rhythmGame_java.git"
-          target="_blank"
-          ><img src='../image/github_white.png'></a
-        ></button>
+        <button id='project'type="button" onclick="href('https://github.com/siaxia/rhythmGame_java.git','_blank')"> 
+          <img src='../image/github_white.png'>
+        </button>
         </article>
       </div>
       </section>
@@ -104,11 +57,9 @@
             <p>로그인, 채팅 및 방만들기를 구현한 2인용 체스게임</p>
             <p id="description">"너 체스 잘하냐?"</p>
         </ul>
-        <button id='project'type="button"><a
-          href="https://github.com/siaxia/chess_unity.git"
-          target="_blank"
-          ><img src='../image/github_white.png'></a
-        ></button>
+        <button id='project'type="button" onclick="href('https://github.com/siaxia/chess_unity.git','_blank')">
+          <img src='../image/github_white.png'>
+        </button>
         </article>
       </div>
       </section>
@@ -121,24 +72,15 @@
           <p>팀프로젝트</p>
           <p>현재 진행 중</p>
           <p id="description">"현지인과 함께하는 여행"</p>
-          <button id='project'type="button"><a
-            href="https://github.com/KilJH/localhost_web"
-            target="_blank"
-            ><img src='../image/github_white.png'></a
-          ></button>
+          <button id='project'type="button"  onclick="href('https://github.com/KilJH/localhost_web','_blank')">
+            <img src='../image/github_white.png'>
+          </button>
         </ul>
         </article>
         </div>
       </section>
         <!-- 푸터 -->
-        <section id="footer">
-          <footer>
-            <article id="footer">
-              <p>© 2021 by Lee Chanbin.</p>
-              <p>웹개발입문 6조</p>
-            </article>
-          </footer>
-        </section>
+        <section id="footer"></section>
     </div>
     </div>
 </body>

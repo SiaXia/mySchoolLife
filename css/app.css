@@ -90,7 +90,7 @@ header > article {
   margin: 0 auto;
   height: 100%;
 }
-input#title {
+a#title {
   position: sticky;
   top: -3em;
   display: block;
@@ -104,15 +104,14 @@ input#title {
   font-family: inherit;
   font-size: 1em;
   font-weight: bold;
-  cursor: pointer;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 1px 1px 1px black;
 }
 header > article > nav > ul {
   margin-top: 1em;
   padding-bottom: 1em;
   margin-bottom: 0;
 }
-header > article > nav > ul > input {
+header > article > nav > ul > a {
   color: white;
   z-index: 22;
   text-shadow: 2px 2px 2px black;
@@ -121,6 +120,9 @@ header > article > nav > ul > input {
   font-family: inherit;
   font-size: 1em;
   cursor: pointer;
+}
+header > article > nav > ul > a:hover {
+  opacity: 0.7;
 }
 /* 푸터 */
 section#footer {
