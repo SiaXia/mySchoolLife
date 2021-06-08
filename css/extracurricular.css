@@ -8,6 +8,7 @@ article {
 }
 p {
   margin: 1em 2em;
+  line-height: 1.6em;
 }
 div#extracurricularBackground {
   width: 100vw;
@@ -23,7 +24,7 @@ div#extracurricularBackground > article {
   background-color: rgba(0, 0, 0, 0.75);
 }
 div#extracurricularBackground > article > img {
-  margin-top: 23vh;
+  margin-top: 34vh;
 }
 div#extracurricularBackground > article > p {
   color: white;
@@ -32,13 +33,10 @@ div#extracurricularBackground > article > p {
 }
 
 section#extracurricular5 > div > article > img {
-  margin-top: 30vh;
+  margin-top: 38vh;
 }
 section#extracurricular6 > div > article > img {
-  margin-top: 18vh;
-}
-section#extracurricular7 > div > article > img {
-  margin-top: 28vh;
+  margin-top: 30vh;
 }
 section#extracurricular9 {
   height: 100vh;

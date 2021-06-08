@@ -8,7 +8,7 @@ body {
   background-color: rgba(255, 255, 255, 0);
   margin: 0;
   animation: fadein 1.5s;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 2px 1px 3px black;
 }
 /* 스크롤바 삭제 */
 body::-webkit-scrollbar {
@@ -45,12 +45,15 @@ a {
   text-decoration: none;
   color: black;
 }
+img {
+  object-fit: contain;
+}
 /* 섹션 */
 section {
   width: 100vw;
   height: 160vh;
   position: sticky;
-  top: 6em;
+  top: 0em;
   bottom: auto;
   z-index: 1;
   text-align: center;
@@ -102,9 +105,9 @@ a#title {
   border: none;
   color: #fdb927;
   font-family: inherit;
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: bold;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 3px 7px 4px black;
 }
 header > article > nav > ul {
   margin-top: 1em;
@@ -114,7 +117,7 @@ header > article > nav > ul {
 header > article > nav > ul > a {
   color: white;
   z-index: 22;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 1px 3px black;
   background: none;
   border: none;
   font-family: inherit;
@@ -130,7 +133,6 @@ section#footer {
   position: fixed;
   height: 100%;
   top: 90%;
-  background-color: rgba(0, 0, 0, 0.5);
   z-index: 21;
   opacity: 0.9;
 }

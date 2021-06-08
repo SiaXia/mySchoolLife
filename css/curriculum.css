@@ -5,6 +5,8 @@
 }
 p {
   line-height: 2em;
+  color: white;
+  margin: 1.5em 8em;
 }
 section#curriculum1,
 #curriculum2,
@@ -26,7 +28,7 @@ section#curriculum1 > article > div {
   background: rgba(0, 0, 0, 0.75);
   position: absolute;
   height: 60vh;
-  top: -78vh;
+  top: -65vh;
   bottom: 0px;
   left: 0;
   right: 0;
@@ -64,7 +66,7 @@ section#curriculum2 > article > div {
   background: rgba(0, 0, 0, 0.75);
   position: absolute;
   height: 60vh;
-  top: -76vh;
+  top: -61vh;
   bottom: 0px;
   left: 0;
   right: 0;
@@ -96,13 +98,13 @@ section#curriculum3 {
   height: 220vh;
 }
 section#curriculum3 > article > div {
-  padding: 4em 2em 6em 2em;
+  padding: 4em 2em 15em 2em;
   margin-top: 8em;
   display: inline-block;
   background: rgba(0, 0, 0, 0.75);
   position: absolute;
   height: 60vh;
-  top: -137vh;
+  top: -110vh;
   bottom: 0px;
   left: 0;
   right: 0;
@@ -123,13 +125,21 @@ section#curriculum4 > div > article {
   margin: auto;
   max-height: 32em;
 }
-p#graph {
-  color: white;
-  margin: 1.5em 8em;
-}
 p#desc {
   margin-top: 2em;
   font-weight: bold;
   font-size: 1.3em;
+  color: #fdb927;
+}
+/* 추가 */
+table {
+  margin: 3em auto;
+  border-spacing: 0.5em 0.5em;
+}
+thead {
+  font-size: 1.1em;
+  color: #fdb927;
+}
+td:nth-child(even) {
   color: #fdb927;
 }

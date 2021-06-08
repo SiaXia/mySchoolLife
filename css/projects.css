@@ -9,7 +9,7 @@ div#projectBlur {
 }
 article#projects {
   display: inline-block;
-  margin-top: 30vh;
+  margin-top: 37vh;
   color: white;
 }
 article#projects > h3 {
@@ -42,38 +42,27 @@ button#project > img {
   margin: 0;
   cursor: pointer;
 }
-section#project1 {
-  background-image: url('../image/lovely_kante.JPG');
+#project1,
+#project2,
+#project3,
+#project4 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   z-index: 2;
 }
-
+section#project1 {
+  background-image: url('../image/lovely_kante.JPG');
+}
 section#project2 {
   background-image: url('../image/rhythmGame.JPG');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: 2;
 }
 section#project3 {
   background-image: url('../image/chessGame.JPG');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: 2;
 }
 section#project4 {
   background-image: url('../image/localhost.JPG');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: 2;
   height: 100vh;
 }
 section#project4 > div > article {
@@ -81,7 +70,7 @@ section#project4 > div > article {
   margin-top: 0;
 }
 section#project4 > div > article > img {
-  margin-top: 35vh;
+  margin-top: 38vh;
 }
 article#projects > img {
   margin: 0;
