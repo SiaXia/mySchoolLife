@@ -83,13 +83,6 @@ const onLoad = (isPage) => {
     makeThePoint(point[i].x, point[i].y, 5);
   }
   canvas.addEventListener(
-    'mousemove',
-    (e) => {
-      move(e);
-    },
-    false
-  );
-  canvas.addEventListener(
     'mousedown',
     (e) => {
       down(e);
@@ -154,14 +147,6 @@ const changeTableItems = (text1, text2) => {
 const removeTableItems = () => {
   const tbody = document.getElementById('tbody');
   tbody.innerHTML = null;
-};
-const move = (e) => {
-  for (let i = 0; i < 6; i++) {
-    if (getIntoThePoint(e, point[i].x, point[i].y))
-      canvas.style.cursor = 'pointer';
-    else if (getOutFromThePoint(e, point[i].x, point[i].y))
-      canvas.style.cursor = 'default';
-  }
 };
 const down = (e) => {
   const major = document.getElementById('major');
