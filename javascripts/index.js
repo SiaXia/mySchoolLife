@@ -44,7 +44,7 @@ const onLoad = (isPage) => {
     },
   ];
   a.id = 'title';
-  a.innerText = '방구석 이찬빈';
+  a.innerText = '이찬빈의 포트폴리오';
   isPage ? (a.href = '../index.html') : (a.style.cursor = 'default');
   nav.appendChild(a);
 
