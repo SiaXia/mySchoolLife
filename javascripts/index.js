@@ -1,15 +1,18 @@
 // 추가
 const graph = new Image();
-const point = [
-  { index: 0, x: 103, y: 83 },
-  { index: 1, x: 227, y: 63 },
-  { index: 2, x: 350, y: 160 },
-  { index: 3, x: 474, y: 115 },
-  { index: 4, x: 597, y: 55 },
-  { index: 5, x: 721, y: 55 },
-];
+
+// X좌표 계산
+const pointX = (index) => {
+  return (index + 1) * 78 + 50;
+};
+// Y좌표 계산
+const pointY = (grade) => {
+  return 75 * (4.5 - grade) + 25;
+};
+const point = [];
+const grade = [3.27, 3.56, 2.17, 2.8, 3.67, 3.67, 4.5, 4.5];
 let canvas, context, x, y;
-const onLoad = (isPage) => {
+const onLoad = (pageNumber) => {
   // header
   const header = document.getElementById('header');
   const headerArticle = document.createElement('article');
@@ -20,32 +23,32 @@ const onLoad = (isPage) => {
     {
       id: 'intro',
       text: '소개',
-      href: `${isPage ? '' : 'pages/'}introduction.html`,
+      href: `${pageNumber !== 0 ? '' : 'pages/'}introduction.html`,
     },
     {
       id: 'cur',
       text: '교과활동',
-      href: `${isPage ? '' : 'pages/'}curriculum.html`,
+      href: `${pageNumber !== 0 ? '' : 'pages/'}curriculum.html`,
     },
     {
       id: 'excur',
       text: '비교과활동',
-      href: `${isPage ? '' : 'pages/'}extracurricular.html`,
+      href: `${pageNumber !== 0 ? '' : 'pages/'}extracurricular.html`,
     },
     {
       id: 'proj',
       text: '프로젝트',
-      href: `${isPage ? '' : 'pages/'}projects.html`,
+      href: `${pageNumber !== 0 ? '' : 'pages/'}projects.html`,
     },
     {
       id: 'closing',
       text: '맺는말',
-      href: `${isPage ? '' : 'pages/'}closing.html`,
+      href: `${pageNumber !== 0 ? '' : 'pages/'}closing.html`,
     },
   ];
   a.id = 'title';
-  a.innerText = '이찬빈의 포트폴리오';
-  isPage ? (a.href = '../index.html') : (a.style.cursor = 'default');
+  a.innerText = '이찬빈의 포트폴리오'; // 제목 변경
+  pageNumber !== 0 ? (a.href = '../index.html') : (a.style.cursor = 'default');
   nav.appendChild(a);
 
   for (let i = 0; i < 5; i++) {
@@ -74,14 +77,62 @@ const onLoad = (isPage) => {
   footer.appendChild(footerArticle);
   section.appendChild(footer);
 
+  switch (pageNumber) {
+    case 0:
+      clock();
+      let intervalClock = () => setInterval(clock, 0);
+      intervalClock();
+      return;
+    case 2:
+      makeCanvas();
+      return;
+    default:
+      return;
+  }
+};
+const clock = () => {
+  const date = document.getElementById('date');
+  const clock = document.getElementById('clock');
+  const nowDate = new Date();
+  const hour = nowDate.getHours();
+  const min = nowDate.getMinutes();
+  const sec = nowDate.getSeconds();
+  date.innerText = nowDate.toLocaleDateString();
+  clock.innerText = `${timeFormat(hour)}:${timeFormat(min)}:${timeFormat(sec)}`;
+};
+const timeFormat = (text) => {
+  return `${text < 10 ? '0' + text : text}`;
+};
+// 캔버스 그리기
+const makeCanvas = () => {
+  // initialize points
+  for (let i = 0; i < 8; i++) {
+    point.push({
+      index: i,
+      grade: grade[i],
+      x: pointX(i),
+      y: pointY(grade[i]),
+    });
+  }
+
   // canvas
   canvas = document.getElementById('myCanvas');
   context = canvas.getContext('2d');
 
-  context.drawImage(graph, 0, 0, 800, 370);
-  for (let i = 0; i < 6; i++) {
+  drawGraph();
+
+  for (let i = 0; i < point.length; i++) {
     makeThePoint(point[i].x, point[i].y, 5);
   }
+
+  canvas.addEventListener(
+    'mousemove',
+    (e) => {
+      move(e);
+    },
+    false
+  );
+
   canvas.addEventListener(
     'mousedown',
     (e) => {
@@ -90,6 +141,56 @@ const onLoad = (isPage) => {
     false
   );
 };
+
+// 그래프 그리기
+const drawGraph = () => {
+  // background
+  context.beginPath();
+  context.rect(0, 0, 800, 370);
+  context.fillStyle = 'white';
+  context.fill();
+
+  context.font = '1em MaruBuri-Regular';
+  let y = 25,
+    grade = 4.5;
+  for (let i = 0; i < 5; i++) {
+    // grade
+    context.strokeStyle = 'black';
+    context.lineWidth = 1;
+    context.strokeText(grade--, 15, y + 5);
+
+    // outer line
+    context.strokeStyle = 'rgba(0,0,0,0.5)';
+    context.lineWidth = 0.25;
+    context.moveTo(50, y);
+    context.lineTo(750, y);
+    y = y + 75;
+  }
+  context.stroke();
+
+  // text
+  context.beginPath();
+  context.lineWidth = 1;
+  context.fillStyle = '#FDB927';
+  for (let i = 0; i < point.length; i++) {
+    if (i < point.length - 1) {
+      context.strokeStyle = 'rgb(253,185,39)';
+      context.moveTo(point[i].x, point[i].y);
+      context.lineTo(point[i + 1].x, point[i + 1].y);
+      context.stroke();
+    }
+    context.strokeStyle = 'black';
+    // my grade
+    context.strokeText(point[i].grade, point[i].x - 16, point[i].y + 35);
+    // period
+    context.strokeText(
+      `${Math.floor(point[i].index / 2) + 1}/${(point[i].index % 2) + 1}`,
+      point[i].x - 16,
+      350
+    );
+  }
+};
+
 // 점에 들어왔을 때
 const getIntoThePoint = (e, x, y) => {
   if (
@@ -104,10 +205,11 @@ const getIntoThePoint = (e, x, y) => {
 // 점에서 나갔을 때
 const getOutFromThePoint = (e, x, y) => {
   if (
-    (e.offsetX == x + 6 && e.offsetY <= y + 5 && e.offsetY >= y - 5) ||
-    (e.offsetX == x - 6 && e.offsetY <= y + 5 && e.offsetY >= y - 5) ||
-    (e.offsetY == y + 6 && e.offsetX <= x + 5 && e.offsetX >= x - 5) ||
-    (e.offsetY == y - 6 && e.offsetX <= x + 5 && e.offsetX >= x - 5)
+    !getIntoThePoint(e, x, y) &&
+    e.offsetX <= x + 9 &&
+    e.offsetX >= x - 9 &&
+    e.offsetY <= y + 9 &&
+    e.offsetY >= y - 9
   ) {
     return true;
   } else return false;
@@ -148,14 +250,23 @@ const removeTableItems = () => {
   const tbody = document.getElementById('tbody');
   tbody.innerHTML = null;
 };
+
+const move = (e) => {
+  for (let i = 0; i < point.length; i++) {
+    x = point[i].x;
+    y = point[i].y;
+    if (getIntoThePoint(e, x, y)) canvas.style.cursor = 'pointer';
+    else if (getOutFromThePoint(e, x, y)) canvas.style.cursor = 'default';
+  }
+};
+
 const down = (e) => {
   const major = document.getElementById('major');
   const desc = document.getElementById('desc');
-  context.drawImage(graph, 0, 0, 800, 370);
-  for (let i = 0; i < 6; i++) {
+  drawGraph();
+  for (let i = 0; i < point.length; i++) {
     x = point[i].x;
     y = point[i].y;
-    makeThePoint(x, y, 5);
     if (getIntoThePoint(e, x, y)) {
       makeThePoint(x, y, 10);
       major.innerText = '';
@@ -216,8 +327,23 @@ const down = (e) => {
           desc.innerText =
             '흥미있는 전공을 들으며 작은 프로젝트를 하나씩 시작해보는 학기';
           break;
+        case 6:
+          changeTableHead('4학년 1학기');
+          changeTableItems('웹개발입문', 'A+');
+          changeTableItems('웹프로그래밍', 'A+');
+          changeTableItems('프론트엔드개발', 'A+');
+          changeTableItems('데이터베이스', 'A+');
+          changeTableItems('캡스톤디자인', 'A+');
+          desc.innerText =
+            '프론트엔드 개발자가 되기 위해 본격적으로 웹 공부 및 프로젝트 시작!';
+          break;
+        case 7:
+          changeTableHead('4학년 2학기');
+          changeTableItems('백엔드프레임워크', 'A+');
+          changeTableItems('소프트웨어캡스톤디자인', 'A+');
+          desc.innerText = '백엔드 지식을 쌓으며 프로젝트로 학교생활 마무리';
+          break;
       }
-    }
+    } else makeThePoint(x, y, 5);
   }
 };
-graph.src = '../image/graph.JPG';

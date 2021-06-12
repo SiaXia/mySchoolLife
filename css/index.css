@@ -57,3 +57,19 @@ div#home > #hi {
 section#footer {
   background: transparent;
 }
+
+/* 추가 */
+div#home > #date,
+div#home > #clock {
+  margin-top: 0;
+  margin-bottom: 0.1em;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+div#home > #date {
+  color: #fdb927;
+}
+div#home > #clock {
+  margin-bottom: 0.75em;
+  opacity: 0.9;
+}
