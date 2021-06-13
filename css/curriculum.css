@@ -133,7 +133,7 @@ p#desc {
 }
 /* 추가 */
 table {
-  margin: 3em auto;
+  margin: 2em auto;
   border-spacing: 0.5em 0.5em;
 }
 thead {
@@ -142,4 +142,7 @@ thead {
 }
 td:nth-child(even) {
   color: #fdb927;
+}
+#footer > p {
+  margin: 1em 2em;
 }

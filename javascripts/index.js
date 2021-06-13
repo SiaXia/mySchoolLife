@@ -12,6 +12,12 @@ const pointY = (grade) => {
 const point = [];
 const grade = [3.27, 3.56, 2.17, 2.8, 3.67, 3.67, 4.5, 4.5];
 let canvas, context, x, y;
+
+// onclick시 윈도우 열기
+const href = (url) => {
+  window.open(url, '_blank');
+};
+
 const onLoad = (pageNumber) => {
   // header
   const header = document.getElementById('header');
@@ -96,13 +102,24 @@ const clock = () => {
   const nowDate = new Date();
   const hour = nowDate.getHours();
   const min = nowDate.getMinutes();
-  const sec = nowDate.getSeconds();
   date.innerText = nowDate.toLocaleDateString();
-  clock.innerText = `${timeFormat(hour)}:${timeFormat(min)}:${timeFormat(sec)}`;
+  clock.innerText = timeFormat(hour, min);
 };
-const timeFormat = (text) => {
-  return `${text < 10 ? '0' + text : text}`;
+
+// 시간 포맷
+const timeFormat = (hour, min) => {
+  // 0 이하일 경우 0 추가
+  const zeroFormat = (text) => {
+    return text < 10 ? '0' + text : text;
+  };
+  // 오후
+  if (hour > 12) {
+    return `${zeroFormat(hour - 12)}:${zeroFormat(min)} PM`;
+  }
+  // 오전
+  else return `${zeroFormat(hour)}:${zeroFormat(min)} AM`;
 };
+
 // 캔버스 그리기
 const makeCanvas = () => {
   // initialize points

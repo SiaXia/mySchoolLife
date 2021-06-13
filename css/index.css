@@ -1,12 +1,11 @@
 /* 메인 */
 header {
   width: 40em;
-  padding: 2em 0 0 0;
+  padding: 0;
   position: block;
 }
 header > article > nav {
   padding: 1em 3em;
-  /* background-color: rgba(33, 33, 33, 0.8); */
 }
 header > article > nav > ul {
   padding-top: 3em;
@@ -26,18 +25,14 @@ article#home {
 }
 div#home {
   background-color: rgba(0, 0, 0, 0.3);
-  padding: 3em;
+  padding: 1em;
   display: block;
   margin: 0 auto;
   width: 25em;
-  max-width: 30%;
   position: absolute;
-  top: 28%;
-  left: 0%;
-  bottom: 0;
+  top: 25%;
+  left: 0;
   right: 0;
-  height: 25%;
-  padding-bottom: 15em;
 }
 div#home > img {
   max-width: 73%;
@@ -61,15 +56,17 @@ section#footer {
 /* 추가 */
 div#home > #date,
 div#home > #clock {
-  margin-top: 0;
-  margin-bottom: 0.1em;
+  display: inline-block;
   font-weight: bold;
   font-size: 1.3em;
 }
 div#home > #date {
+  margin: 0 0 1em 9em;
   color: #fdb927;
+  opacity: 0.95;
 }
 div#home > #clock {
-  margin-bottom: 0.75em;
-  opacity: 0.9;
+  margin: 0 0 1em 0.25em;
+  opacity: 0.85;
+  font-size: 1.1em;
 }
