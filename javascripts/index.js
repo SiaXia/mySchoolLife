@@ -53,7 +53,7 @@ const onLoad = (pageNumber) => {
     },
   ];
   a.id = 'title';
-  a.innerText = '이찬빈의 포트폴리오'; // 제목 변경
+  a.innerText = '방구석 이찬빈'; // 제목 변경
   pageNumber !== 0 ? (a.href = '../index.html') : (a.style.cursor = 'default');
   nav.appendChild(a);
 
